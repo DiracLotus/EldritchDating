@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Data"
   ],
-  "SelectedNode": "\\EldritchDating.API.csproj",
+  "SelectedNode": "\\Data\\AuthRepository.cs",
   "PreviewInSolutionExplorer": false
 }
