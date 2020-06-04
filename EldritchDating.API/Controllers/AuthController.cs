@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EldritchDating.API.Data;
 using EldritchDating.API.DTOs;
 using EldritchDating.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -14,6 +15,7 @@ namespace EldritchDating.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository repo;
