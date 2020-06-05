@@ -23,6 +23,7 @@ namespace EldritchDating.API.Controllers
 
         // GET api/values
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IActionResult> GetValues()
         {
             var values = await context.Values.ToListAsync();
@@ -32,6 +33,7 @@ namespace EldritchDating.API.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetValue(int id)
         {
             var value = await context.Values.FirstOrDefaultAsync(x => x.Id == id);
