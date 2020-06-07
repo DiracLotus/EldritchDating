@@ -1,0 +1,135 @@
+[
+    {
+      "Username": "Cthulhu",
+      "Devotion": "Great Old One",
+      "KnownAs": "The Great Dreamer",
+      "Password": "password",
+      "Created": "2017-08-02",
+      "LastActive": "2017-08-02",
+      "Introduction": "Nulla excepteur sit anim ex do qui laboris officia eiusmod ut incididunt. Enim occaecat sint dolor esse et enim. Ad cupidatat exercitation ea id eiusmod nostrud amet Lorem sint. Laboris cupidatat aute dolor ad eu tempor elit ea tempor quis et. Lorem eiusmod commodo cillum id aute nisi fugiat. Aute laborum tempor ullamco elit exercitation veniam commodo elit dolor.\r\n",
+      "LookingFor": "Non do nostrud voluptate cupidatat et proident enim labore voluptate incididunt labore. Incididunt consectetur dolor proident nulla tempor et ipsum anim duis aute commodo duis. Est ullamco fugiat velit exercitation sunt enim duis nisi laborum culpa. Magna reprehenderit excepteur commodo nisi ullamco pariatur laboris. Ullamco fugiat eiusmod veniam duis elit. Cupidatat non occaecat consectetur sunt qui anim. In commodo in deserunt et veniam ad nulla.\r\n",
+      "Interests": "Dolore nisi eiusmod ut irure ullamco nulla dolore est sit tempor quis.",
+      "Location": "R'lyeh",
+      "Photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Cthulhu_and_R%27lyeh.jpg/220px-Cthulhu_and_R%27lyeh.jpg",
+          "isMain": true,
+          "description": "Non deserunt labore sunt ex laboris et adipisicing ullamco officia minim."
+        }
+      ]
+    },
+    {
+      "Username": "Dagon",
+      "Devotion": "Great Old One",
+      "KnownAs": "Father Dagon",
+      "Password": "password",
+      "Created": "2015-02-01",
+      "LastActive": "2017-08-01",
+      "Introduction": "Nulla excepteur sit anim ex do qui laboris officia eiusmod ut incididunt. Enim occaecat sint dolor esse et enim. Ad cupidatat exercitation ea id eiusmod nostrud amet Lorem sint. Laboris cupidatat aute dolor ad eu tempor elit ea tempor quis et. Lorem eiusmod commodo cillum id aute nisi fugiat. Aute laborum tempor ullamco elit exercitation veniam commodo elit dolor.\r\n",
+	  "LookingFor": "Taken and in a loving relationship. Just looking for some cultists to join my cult and worship me.",
+      "Interests": "Non do nostrud voluptate cupidatat et proident enim labore voluptate incididunt labore. Incididunt consectetur dolor proident nulla tempor et ipsum anim duis aute commodo duis. Est ullamco fugiat velit exercitation sunt enim duis nisi laborum culpa. Magna reprehenderit excepteur commodo nisi ullamco pariatur laboris. Ullamco fugiat eiusmod veniam duis elit. Cupidatat non occaecat consectetur sunt qui anim. In commodo in deserunt et veniam ad nulla.\r\n",
+      "Location": "Innsmouth",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/lovecraft/images/c/c6/Dagon2.jpg/revision/latest/scale-to-width-down/350?cb=20150525010028",
+          "isMain": true,
+          "description": "Non deserunt labore sunt ex laboris et adipisicing ullamco officia minim."
+        }
+      ]
+    },
+    {
+      "Username": "Hastur",
+      "Devotion": "Great Old One",
+      "KnownAs": "The Unspeakable One",
+      "Password": "kinginyellow",
+      "Created": "2013-11-11",
+      "LastActive": "2017-08-01",
+      "Introduction": "Nulla excepteur sit anim ex do qui laboris officia eiusmod ut incididunt. Enim occaecat sint dolor esse et enim. Ad cupidatat exercitation ea id eiusmod nostrud amet Lorem sint. Laboris cupidatat aute dolor ad eu tempor elit ea tempor quis et. Lorem eiusmod commodo cillum id aute nisi fugiat. Aute laborum tempor ullamco elit exercitation veniam commodo elit dolor.\r\n",
+	  "LookingFor": "Cultists.",
+      "Interests": "Yellow.\r\n",
+      "Location": "Anywhere and everywhere.",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/lovecraft/images/f/fd/Screenshot_20171022-091543.jpg/revision/latest/scale-to-width-down/350?cb=20171022142019",
+          "isMain": true,
+          "description": "Non deserunt labore sunt ex laboris et adipisicing ullamco officia minim."
+        }
+      ]
+    },
+    {
+      "Username": "HarveyWalters",
+      "Devotion": "Cultist",
+      "KnownAs": "Harvey Walters",
+      "Password": "password",
+      "Created": "2013-11-11",
+      "LastActive": "2017-08-01",
+      "Introduction": "I have experience dealing with these sorts of horrors.\r\n",
+	  "LookingFor": "A fellow bookworm to while away the long hours in the dusty library with. No Great Old Ones, thank you. Harvey.",
+      "Interests": "Books. Tomes. Files.\r\n",
+      "Location": "Arkham.",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/7/7a/Harvey_Walters.jpg/revision/latest?cb=20160911143608",
+          "isMain": true,
+          "description": "Don't I look focussed huh? You can count on this level of commitment."
+        }
+      ]
+    },
+    {
+      "Username": "Agatha",
+      "Devotion": "Cultist",
+      "KnownAs": "Agatha Crane",
+      "Password": "password",
+      "Created": "2013-11-11",
+      "LastActive": "2017-08-01",
+      "Introduction": "The proof, as they say, is in the pudding.\r\n",
+	  "LookingFor": "A fellow cultist to join me in chanting IA IA",
+      "Interests": "Parapsychology.\r\n",
+      "Location": "Toyko.",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/6/60/Agatha_Crane.png/revision/latest?cb=20180226215431",
+          "isMain": true,
+          "description": "5 minutes later, I spilled coffee on this bugger."
+        }
+      ]
+    },
+    {
+      "Username": "Monterey Jack",
+      "Devotion": "Cultist",
+      "KnownAs": "Cheeseman",
+      "Password": "password",
+      "Created": "2014-07-30",
+      "LastActive": "2017-06-13",
+      "Introduction": "To find a treasure like you, I'll risk a few poison darts.\r\n",
+	  "LookingFor": "Been around the block a few times, now I'm looking for a Great Old One to settle down in reverence of.\r\n",
+      "Interests": "Archeology.\r\n",
+      "Location": "Cairo.",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/d/d4/Monterey_Jack.jpg/revision/latest?cb=20160910184050",
+          "isMain": true,
+          "description": "Check out these guns."
+        }
+      ]
+    },
+    {
+      "Username": "Lily Chen",
+      "Devotion": "Cultist",
+      "KnownAs": "Fists of Fury",
+      "Password": "password",
+      "Created": "2014-08-01",
+      "LastActive": "2014-08-01",
+      "Introduction": "I have been preparing to confront a relationship for my entire life. My focus must be absolute.\r\n",
+	  "LookingFor": "Not going to lie, my friends made this for me as a joke.\r\n",
+      "Interests": "Martial Arts.\r\n",
+      "Location": "Shanghai.",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/d/de/Lily_Chen.jpg/revision/latest?cb=20160910174414",
+          "isMain": true,
+          "description": "Me."
+        }
+      ]
+    },
+]
