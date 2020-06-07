@@ -3,20 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EldritchDating.API.Migrations
 {
-    public partial class ExtendedUser : Migration
+    public partial class ExtendedUserClass : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "City",
-                table: "Users",
-                nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "Country",
-                table: "Users",
-                nullable: true);
-
             migrationBuilder.AddColumn<DateTime>(
                 name: "Created",
                 table: "Users",
@@ -48,6 +38,11 @@ namespace EldritchDating.API.Migrations
                 table: "Users",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+            migrationBuilder.AddColumn<string>(
+                name: "Location",
+                table: "Users",
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "LookingFor",
@@ -89,14 +84,6 @@ namespace EldritchDating.API.Migrations
                 name: "Photos");
 
             migrationBuilder.DropColumn(
-                name: "City",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
-                name: "Country",
-                table: "Users");
-
-            migrationBuilder.DropColumn(
                 name: "Created",
                 table: "Users");
 
@@ -118,6 +105,10 @@ namespace EldritchDating.API.Migrations
 
             migrationBuilder.DropColumn(
                 name: "LastActive",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "Location",
                 table: "Users");
 
             migrationBuilder.DropColumn(
