@@ -17,6 +17,6 @@ namespace EldritchDating.API.DTOs
         public string Interests { get; set; }
         public string Location { get; set; }
         public string PhotoUrl { get; set; }
-        public ICollection<Photo> Photos { get; set; }
+        public ICollection<PhotoForDetailDto> Photos { get; set; }
     }
 }
