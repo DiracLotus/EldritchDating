@@ -1,8 +1,8 @@
 [
     {
-      "Username": "Cthulhu",
+      "Username": "Great_Dreamer",
       "Devotion": "Great Old One",
-      "KnownAs": "The Great Dreamer",
+      "KnownAs": "Cthulhu",
       "Password": "password",
       "Created": "2017-08-02",
       "LastActive": "2017-08-02",
@@ -15,13 +15,23 @@
           "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Cthulhu_and_R%27lyeh.jpg/220px-Cthulhu_and_R%27lyeh.jpg",
           "isMain": true,
           "description": "Non deserunt labore sunt ex laboris et adipisicing ullamco officia minim."
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Cthulhu_sketch_by_Lovecraft.jpg/220px-Cthulhu_sketch_by_Lovecraft.jpg",
+          "isMain": false,
+          "description": "Just a sketch of myself."
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/20100701_cthulhu_poster.jpg/220px-20100701_cthulhu_poster.jpg",
+          "isMain": false,
+          "description": "You know I ran for election right?"
         }
       ]
     },
     {
-      "Username": "Dagon",
+      "Username": "Father Dagon",
       "Devotion": "Great Old One",
-      "KnownAs": "Father Dagon",
+      "KnownAs": "Dagon",
       "Password": "password",
       "Created": "2015-02-01",
       "LastActive": "2017-08-01",
@@ -38,9 +48,9 @@
       ]
     },
     {
-      "Username": "Hastur",
+      "Username": "Th3Unsp34k4b130nE",
       "Devotion": "Great Old One",
-      "KnownAs": "The Unspeakable One",
+      "KnownAs": "Hastur",
       "Password": "kinginyellow",
       "Created": "2013-11-11",
       "LastActive": "2017-08-01",
@@ -59,14 +69,14 @@
     {
       "Username": "HarveyWalters",
       "Devotion": "Cultist",
-      "KnownAs": "Harvey Walters",
+      "KnownAs": "Harvey",
       "Password": "password",
       "Created": "2013-11-11",
       "LastActive": "2017-08-01",
       "Introduction": "I have experience dealing with these sorts of horrors.\r\n",
 	  "LookingFor": "A fellow bookworm to while away the long hours in the dusty library with. No Great Old Ones, thank you. Harvey.",
       "Interests": "Books. Tomes. Files.\r\n",
-      "Location": "Arkham.",
+      "Location": "Arkham",
       "Photos": [
         {
           "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/7/7a/Harvey_Walters.jpg/revision/latest?cb=20160911143608",
@@ -76,16 +86,16 @@
       ]
     },
     {
-      "Username": "Agatha",
+      "Username": "AgathaCrane",
       "Devotion": "Cultist",
-      "KnownAs": "Agatha Crane",
+      "KnownAs": "Agatha",
       "Password": "password",
       "Created": "2013-11-11",
       "LastActive": "2017-08-01",
       "Introduction": "The proof, as they say, is in the pudding.\r\n",
 	  "LookingFor": "A fellow cultist to join me in chanting IA IA",
       "Interests": "Parapsychology.\r\n",
-      "Location": "Toyko.",
+      "Location": "Toyko",
       "Photos": [
         {
           "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/6/60/Agatha_Crane.png/revision/latest?cb=20180226215431",
@@ -95,7 +105,7 @@
       ]
     },
     {
-      "Username": "Monterey Jack",
+      "Username": "MontereyJack",
       "Devotion": "Cultist",
       "KnownAs": "Cheeseman",
       "Password": "password",
@@ -104,7 +114,7 @@
       "Introduction": "To find a treasure like you, I'll risk a few poison darts.\r\n",
 	  "LookingFor": "Been around the block a few times, now I'm looking for a Great Old One to settle down in reverence of.\r\n",
       "Interests": "Archeology.\r\n",
-      "Location": "Cairo.",
+      "Location": "Cairo",
       "Photos": [
         {
           "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/d/d4/Monterey_Jack.jpg/revision/latest?cb=20160910184050",
@@ -114,19 +124,62 @@
       ]
     },
     {
-      "Username": "Lily Chen",
+      "Username": "SpinnerInDarkness",
+      "Devotion": "Great Old One",
+      "KnownAs": "Atlach-Nacha",
+      "Password": "password",
+      "Created": "2001-11-08",
+      "LastActive": "2011-11-08",
+      "Introduction": "Nulla excepteur sit anim ex do qui laboris officia eiusmod ut incididunt. Enim occaecat sint dolor esse et enim. Ad cupidatat exercitation ea id eiusmod nostrud amet Lorem sint. Laboris cupidatat aute dolor ad eu tempor elit ea tempor quis et. Lorem eiusmod commodo cillum id aute nisi fugiat. Aute laborum tempor ullamco elit exercitation veniam commodo elit dolor.\r\n",
+	  "LookingFor": "Cultists.",
+      "Interests": "Webs. Cults.\r\n",
+      "Location": "Hyperborea",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/lovecraft/images/1/12/Atlach-Nacha_%28Internet%29.jpg/revision/latest/scale-to-width-down/350?cb=20190713053424",
+          "isMain": true,
+          "description": "Me."
+        },
+        {
+          "url": "https://vignette.wikia.nocookie.net/lovecraft/images/d/de/Atlach-Nacha_%28%C3%89ditions_Sans-D%C3%A9tour%29.jpg/revision/latest/zoom-crop/width/240/height/240?cb=20190713051809",
+          "isMain": false,
+          "description": "Also Me."
+        }
+      ]
+    },
+    {
+      "Username": "FistsOfChen",
       "Devotion": "Cultist",
-      "KnownAs": "Fists of Fury",
+      "KnownAs": "Lily",
       "Password": "password",
       "Created": "2014-08-01",
       "LastActive": "2014-08-01",
       "Introduction": "I have been preparing to confront a relationship for my entire life. My focus must be absolute.\r\n",
 	  "LookingFor": "Not going to lie, my friends made this for me as a joke.\r\n",
       "Interests": "Martial Arts.\r\n",
-      "Location": "Shanghai.",
+      "Location": "Shanghai",
       "Photos": [
         {
           "url": "https://vignette.wikia.nocookie.net/eldritchhorrorgame/images/d/de/Lily_Chen.jpg/revision/latest?cb=20160910174414",
+          "isMain": true,
+          "description": "Me."
+        }
+      ]
+    },
+    {
+      "Username": "PatriceHathaway",
+      "Devotion": "Cultist",
+      "KnownAs": "Patrice",
+      "Password": "password",
+      "Created": "2014-08-01",
+      "LastActive": "2014-08-01",
+      "Introduction": "When I play the violin, the music echoes in other worlds. Guess what else does... \r\n",
+	  "LookingFor": "Front row seats to a good time.\r\n",
+      "Interests": "Violin.\r\n",
+      "Location": "Innsmouth",
+      "Photos": [
+        {
+          "url": "https://vignette.wikia.nocookie.net/lovecraft/images/4/4a/PatriceHathaway1.jpeg/revision/latest?cb=20190823185333",
           "isMain": true,
           "description": "Me."
         }
