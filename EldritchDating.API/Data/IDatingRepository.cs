@@ -11,5 +11,6 @@ namespace EldritchDating.API.Data
          Task<bool> SaveAll();
          Task<IEnumerable<User>> GetUsers();
          Task<User> GetUser(int id);
+         Task<Photo> GetPhotoAsync(int photoId);
     }
 }

@@ -19,6 +19,8 @@ namespace EldritchDating.API.Helpers
                 .ForMember(d => d.AccountAge, o => o.MapFrom(s => s.Created.CalculateAge()));
             CreateMap<Photo, PhotoForDetailDto>();
             CreateMap<UserForUpdateDto, User>();
+            CreateMap<Photo, PhotoForReturnDto>();
+            CreateMap<PhotoForCreationDto, Photo>();
         }
     }
 }

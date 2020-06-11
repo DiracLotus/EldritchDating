@@ -40,5 +40,11 @@ namespace EldritchDating.API.Data
         {
             return await context.SaveChangesAsync() > 0;
         }
+
+        public async Task<Photo> GetPhotoAsync(int photoId) {
+            var photo = await context.Photos.FirstOrDefaultAsync(p => p.Id == photoId);
+
+            return photo;
+        }
     }
 }
