@@ -118,5 +118,40 @@ namespace EldritchDating.API.Controllers
 
             return BadRequest("Could not set photo to main");
         }
+
+        [HttpDelete("{photoId}")]
+        public async Task<IActionResult> DeletePhoto(int userId, int photoId) {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var userFromRepo = await repo.GetUser(userId);
+
+            if (!userFromRepo.Photos.Any(p => photoId == p.Id))
+                return Unauthorized();
+
+            var photoFromRepo = await repo.GetPhotoAsync(photoId);
+
+            if (photoFromRepo.IsMain)
+                return BadRequest("For the purposes of this, you cannot delete your main photo");
+
+            if (photoFromRepo.PublicId != null) {
+
+                var deleteParams = new DeletionParams(photoFromRepo.PublicId);
+                var result = cloudinary.Destroy(deleteParams);
+
+                if (result.Result == "ok") {
+                    repo.Delete(photoFromRepo);
+                }
+            } 
+            else 
+            {
+                    repo.Delete(photoFromRepo);
+            }
+
+            if (await repo.SaveAll())
+                return Ok();
+
+            return BadRequest("Failed to delete photo");
+        }
     }
 }
