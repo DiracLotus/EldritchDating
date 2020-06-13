@@ -93,5 +93,30 @@ namespace EldritchDating.API.Controllers
 
             return BadRequest("Could not add the photo");
         }
+
+        [HttpPost("{photoId}/setMain")]
+        public async Task<IActionResult> SetMainPhoto(int userId, int photoId) {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var userFromRepo = await repo.GetUser(userId);
+
+            if (!userFromRepo.Photos.Any(p => photoId == p.Id))
+                return Unauthorized();
+
+            var photoFromRepo = await repo.GetPhotoAsync(photoId);
+
+            if (photoFromRepo.IsMain)
+                return BadRequest("This is already the main photo");
+            
+            var currentMainPhoto = await repo.GetMainPhotoForUserAsync(userId);
+            currentMainPhoto.IsMain = false;
+            photoFromRepo.IsMain = true;
+
+            if (await repo.SaveAll())
+                return NoContent();
+
+            return BadRequest("Could not set photo to main");
+        }
     }
 }

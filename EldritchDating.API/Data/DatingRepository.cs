@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using EldritchDating.API.Models;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,12 @@ namespace EldritchDating.API.Data
             var photo = await context.Photos.FirstOrDefaultAsync(p => p.Id == photoId);
 
             return photo;
+        }
+
+        public async Task<Photo> GetMainPhotoForUserAsync(int userId)
+        {
+            return await context.Photos.Where(u => u.UserId == userId)
+                .FirstOrDefaultAsync(p => p.IsMain);
         }
     }
 }
