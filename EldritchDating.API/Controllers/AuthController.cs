@@ -3,6 +3,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using EldritchDating.API.Data;
 using EldritchDating.API.DTOs;
 using EldritchDating.API.Models;
@@ -20,10 +21,12 @@ namespace EldritchDating.API.Controllers
     {
         private readonly IAuthRepository repo;
         private readonly IConfiguration config;
+        private readonly IMapper mapper;
 
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        public AuthController(IAuthRepository repo, IConfiguration config, IMapper mapper)
         {
             this.config = config;
+            this.mapper = mapper;
             this.repo = repo;
         }
 
@@ -74,8 +77,11 @@ namespace EldritchDating.API.Controllers
             
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
+            var user = mapper.Map<UserForListDto>(userFromRepo);
+
             return Ok(new {
-                token = tokenHandler.WriteToken(token)
+                token = tokenHandler.WriteToken(token),
+                user
             });
         }
     }
