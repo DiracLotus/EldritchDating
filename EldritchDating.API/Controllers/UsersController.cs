@@ -27,11 +27,13 @@ namespace EldritchDating.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetUsers() 
+        public async Task<IActionResult> GetUsers([FromQuery]UserParams userParams) 
         {
-            var users = await repository.GetUsers();
+            var users = await repository.GetUsers(userParams);
 
             var usersToReturn = mapper.Map<IEnumerable<UserForListDto>>(users);
+
+            Response.AddPagination(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages);
 
             return Ok(usersToReturn);
         }

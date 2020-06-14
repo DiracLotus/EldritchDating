@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EldritchDating.API.Helpers;
 using EldritchDating.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,9 +33,11 @@ namespace EldritchDating.API.Data
             return user;
         }
 
-        public async Task<IEnumerable<User>> GetUsers()
+        public async Task<PagedList<User>> GetUsers(UserParams userParams)
         {
-            return await context.Users.Include(p => p.Photos).ToListAsync();
+            var users = context.Users.Include(p => p.Photos);
+
+            return await PagedList<User>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
         }
 
         public async Task<bool> SaveAll()
