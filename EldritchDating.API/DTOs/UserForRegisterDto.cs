@@ -20,6 +20,7 @@ namespace EldritchDating.API.DTOs
         public string Location { get; set; }
         public DateTime Created { get; set; }
         public DateTime LastActive { get; set; }
+        public int Age { get; set; }
 
         public UserForRegisterDto()
         {

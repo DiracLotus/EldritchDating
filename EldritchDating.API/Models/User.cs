@@ -18,5 +18,6 @@ namespace EldritchDating.API.Models
         public string Interests { get; set; }
         public string Location { get; set; }
         public ICollection<Photo> Photos { get; set; }
+        public int Age { get; set; }
     }
 }

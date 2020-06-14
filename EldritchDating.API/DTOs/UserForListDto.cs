@@ -13,5 +13,6 @@ namespace EldritchDating.API.DTOs
         public DateTime LastActive { get; set; }
         public string Location { get; set; }
         public string PhotoUrl { get; set; }
+        public int Age { get; set; }
     }
 }

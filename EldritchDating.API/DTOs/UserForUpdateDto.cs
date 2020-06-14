@@ -6,5 +6,6 @@ namespace EldritchDating.API.DTOs
         public string LookingFor { get; set; }
         public string Interests { get; set; }
         public string Location { get; set; }
+        public int Age { get; set; }
     }
 }

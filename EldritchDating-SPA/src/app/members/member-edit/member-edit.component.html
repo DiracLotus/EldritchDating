@@ -21,8 +21,8 @@
             <p>{{ user.location }}</p>
           </div>
           <div>
-            <strong>Account Age:</strong>
-            <p>{{ user.accountAge }}</p>
+            <strong>Age:</strong>
+            <p>{{ user.age }}</p>
           </div>
           <div>
             <strong>Last Active:</strong>
@@ -49,6 +49,11 @@
               <div class="form-inline">
                 <label for="location">Location</label>
                 <input type="text" class="form-control" name="location" [(ngModel)]="user.location">
+              </div>
+              <h4>Age:</h4>
+              <div class="form-inline">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" name="age" [(ngModel)]="user.age">
               </div>
             </form>
           </tab>
