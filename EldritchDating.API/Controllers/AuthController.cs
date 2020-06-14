@@ -38,15 +38,13 @@ namespace EldritchDating.API.Controllers
             if (await repo.UserExists(userForRegisterDto.Username))
                 return BadRequest("Username already exists");
 
-            var userToCreate = new User
-            {
-                UserName = userForRegisterDto.Username
-            };
+            var userToCreate = mapper.Map<User>(userForRegisterDto);
 
             var createdUser = await repo.Register(userToCreate, userForRegisterDto.Password);
+            var userToReturn = mapper.Map<UserForDetailDto>(createdUser);
 
             // TODO createdatroute
-            return StatusCode(201);
+            return CreatedAtRoute("GetUser", new { controller = "Users", id = createdUser.ID}, userToReturn);
         }
 
         [HttpPost("login")]
