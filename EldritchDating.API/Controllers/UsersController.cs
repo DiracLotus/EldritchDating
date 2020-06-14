@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using AutoMapper;
 using EldritchDating.API.Data;
 using EldritchDating.API.DTOs;
+using EldritchDating.API.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EldritchDating.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]

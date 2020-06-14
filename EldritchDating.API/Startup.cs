@@ -56,6 +56,7 @@ namespace EldritchDating.API
                 });
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IDatingRepository, DatingRepository>();
+            services.AddScoped<LogUserActivity>();
 
             //services.AddSingleton()  - one and only one, returns the same each time
             //services.AddTransient()  - returns a new one each time, good for lightweight repos
