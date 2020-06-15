@@ -15,5 +15,6 @@ namespace EldritchDating.API.Helpers
         }
         public int UserId { get; set; }
         public string Devotion { get; set; }
+        public string OrderBy { get; set; }
     }
 }

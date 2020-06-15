@@ -29,6 +29,7 @@ export class MemberListComponent implements OnInit {
     });
 
     this.userParams.devotion = this.user.devotion === 'cultist' ? 'great old one' : 'cultist';
+    this.userParams.orderBy = 'lastActive';
   }
 
   pageChanged(event: any): void {

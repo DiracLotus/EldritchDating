@@ -1,7 +1,7 @@
 [
     {
       "Username": "Great_Dreamer",
-      "Devotion": "Great Old One",
+      "Devotion": "great old one",
       "KnownAs": "Cthulhu",
       "Password": "password",
       "Created": "2017-08-02",
@@ -30,7 +30,7 @@
     },
     {
       "Username": "Father Dagon",
-      "Devotion": "Great Old One",
+      "Devotion": "great old one",
       "KnownAs": "Dagon",
       "Password": "password",
       "Created": "2015-02-01",
@@ -49,7 +49,7 @@
     },
     {
       "Username": "Th3Unsp34k4b130nE",
-      "Devotion": "Great Old One",
+      "Devotion": "great old one",
       "KnownAs": "Hastur",
       "Password": "kinginyellow",
       "Created": "2013-11-11",
@@ -68,7 +68,7 @@
     },
     {
       "Username": "HarveyWalters",
-      "Devotion": "Cultist",
+      "Devotion": "cultist",
       "KnownAs": "Harvey",
       "Password": "password",
       "Created": "2013-11-11",
@@ -87,7 +87,7 @@
     },
     {
       "Username": "AgathaCrane",
-      "Devotion": "Cultist",
+      "Devotion": "cultist",
       "KnownAs": "Agatha",
       "Password": "password",
       "Created": "2013-11-11",
@@ -106,7 +106,7 @@
     },
     {
       "Username": "MontereyJack",
-      "Devotion": "Cultist",
+      "Devotion": "cultist",
       "KnownAs": "Cheeseman",
       "Password": "password",
       "Created": "2014-07-30",
@@ -125,7 +125,7 @@
     },
     {
       "Username": "SpinnerInDarkness",
-      "Devotion": "Great Old One",
+      "Devotion": "great old one",
       "KnownAs": "Atlach-Nacha",
       "Password": "password",
       "Created": "2001-11-08",
@@ -149,7 +149,7 @@
     },
     {
       "Username": "FistsOfChen",
-      "Devotion": "Cultist",
+      "Devotion": "cultist",
       "KnownAs": "Lily",
       "Password": "password",
       "Created": "2014-08-01",
@@ -168,7 +168,7 @@
     },
     {
       "Username": "PatriceHathaway",
-      "Devotion": "Cultist",
+      "Devotion": "cultist",
       "KnownAs": "Patrice",
       "Password": "password",
       "Created": "2014-08-01",
@@ -184,5 +184,5 @@
           "description": "Me."
         }
       ]
-    },
+    }
 ]

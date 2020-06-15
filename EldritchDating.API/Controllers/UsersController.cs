@@ -34,7 +34,7 @@ namespace EldritchDating.API.Controllers
 
             userParams.UserId = currentUserId;
 
-            if (!string.IsNullOrEmpty(userParams.Devotion)) {
+            if (string.IsNullOrEmpty(userParams.Devotion)) {
                 userParams.Devotion = userFromRepo.Devotion.ToLower() == "cultist" ? "great old one" : "cultist";
             }
 

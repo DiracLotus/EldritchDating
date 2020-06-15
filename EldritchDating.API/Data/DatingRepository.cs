@@ -36,11 +36,25 @@ namespace EldritchDating.API.Data
 
         public async Task<PagedList<User>> GetUsers(UserParams userParams)
         {
-            var users = context.Users.Include(p => p.Photos).AsQueryable();
+            var users = context.Users.Include(p => p.Photos)
+                .OrderByDescending(u => u.LastActive).AsQueryable();
 
             users = users.Where(u => u.ID != userParams.UserId);
-            users = users.Where(u => u.Devotion.ToLower() == userParams.Devotion.ToLower());
 
+            if (userParams?.Devotion != null)
+                users = users.Where(u => u.Devotion == userParams.Devotion);
+
+            if (!string.IsNullOrEmpty(userParams.OrderBy))
+            {
+                switch (userParams.OrderBy) {
+                    case "created": 
+                        users = users.OrderByDescending(u => u.Created);
+                        break;
+                    default: 
+                        users = users.OrderByDescending(u => u.LastActive);
+                        break;
+                }
+            }
             return await PagedList<User>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
         }
 
