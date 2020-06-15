@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,7 +36,10 @@ namespace EldritchDating.API.Data
 
         public async Task<PagedList<User>> GetUsers(UserParams userParams)
         {
-            var users = context.Users.Include(p => p.Photos);
+            var users = context.Users.Include(p => p.Photos).AsQueryable();
+
+            users = users.Where(u => u.ID != userParams.UserId);
+            users = users.Where(u => u.Devotion.ToLower() == userParams.Devotion.ToLower());
 
             return await PagedList<User>.CreateAsync(users, userParams.PageNumber, userParams.PageSize);
         }

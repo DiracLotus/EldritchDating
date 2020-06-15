@@ -13,5 +13,7 @@ namespace EldritchDating.API.Helpers
             get { return pageSize; }
             set { pageSize = Math.Min(value, MaxPageSize); }
         }
+        public int UserId { get; set; }
+        public string Devotion { get; set; }
     }
 }

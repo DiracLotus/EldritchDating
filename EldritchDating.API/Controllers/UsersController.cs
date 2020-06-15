@@ -29,6 +29,15 @@ namespace EldritchDating.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUsers([FromQuery]UserParams userParams) 
         {
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            var userFromRepo = await repository.GetUser(currentUserId);
+
+            userParams.UserId = currentUserId;
+
+            if (!string.IsNullOrEmpty(userParams.Devotion)) {
+                userParams.Devotion = userFromRepo.Devotion.ToLower() == "cultist" ? "great old one" : "cultist";
+            }
+
             var users = await repository.GetUsers(userParams);
 
             var usersToReturn = mapper.Map<IEnumerable<UserForListDto>>(users);

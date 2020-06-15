@@ -1,4 +1,22 @@
-<div class="container mt-5">
+<div class="text-center mt-3">
+  <h2>Your matches - {{pagination.totalItems}} found</h2>
+</div>
+
+<div class="container mt-3">
+  <form class="form-inline" #form="ngForm" (ngSubmit)="loadUsers()" novalidate>
+    <div class="form-group px-2">
+      <label for="devotion">Show: </label>
+      <select class="form-control ml-1" style="width: 180px" id="devotion" name="devotion"
+        [(ngModel)]="userParams.devotion">
+        <option *ngFor="let devotion of devotionList" [value]="devotion.value">
+          {{devotion.display}}  
+        </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-left:10px">Apply Filters</button>
+    <button type="button" class="btn btn-info" (click)="resetFilters()" style="margin-left:10px">Reset Filter</button>
+  </form>
+  <br>
   <div class="row">
     <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
       <app-member-card [user]="user"></app-member-card>

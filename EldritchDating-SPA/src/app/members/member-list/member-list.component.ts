@@ -13,6 +13,9 @@ import { Pagination, PaginatedResult } from 'src/app/_models/pagination';
 export class MemberListComponent implements OnInit {
   users: User[];
   pagination: Pagination;
+  user: User = JSON.parse(localStorage.getItem('user'));
+  devotionList = [{value: 'great old one', display: 'Great Old Ones'}, {value: 'cultist', display: 'Cultists'}];
+  userParams: any = {};
 
   constructor(
     private userService: UserService, 
@@ -23,7 +26,9 @@ export class MemberListComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.users = data['users'].result;
       this.pagination = data['users'].pagination;
-    })
+    });
+
+    this.userParams.devotion = this.user.devotion === 'cultist' ? 'great old one' : 'cultist';
   }
 
   pageChanged(event: any): void {
@@ -31,8 +36,13 @@ export class MemberListComponent implements OnInit {
     this.loadUsers();
   }
 
+  resetFilters() {
+    this.userParams.devotion = this.user.devotion === 'cultist' ? 'great old one' : 'cultist';
+    this.loadUsers();
+  }
+
   loadUsers() {
-    this.userService.getUsers(this.pagination.currentPage, this.pagination.itemsPerPage)
+    this.userService.getUsers(this.pagination.currentPage, this.pagination.itemsPerPage, this.userParams)
       .subscribe((res: PaginatedResult<User[]>) => {
         this.users = res.result;
         this.pagination = res.pagination;
