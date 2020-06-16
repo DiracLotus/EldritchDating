@@ -14,5 +14,6 @@ namespace EldritchDating.API.Data
          Task<User> GetUser(int id);
          Task<Photo> GetPhotoAsync(int photoId);
          Task<Photo> GetMainPhotoForUserAsync(int userId);
+         Task<Like> GetLike(int userId, int recipientId);
     }
 }

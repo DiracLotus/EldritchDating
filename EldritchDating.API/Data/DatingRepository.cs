@@ -44,8 +44,19 @@ namespace EldritchDating.API.Data
             if (userParams?.Devotion != null)
                 users = users.Where(u => u.Devotion == userParams.Devotion);
 
-            if (!string.IsNullOrEmpty(userParams.OrderBy))
+            if (userParams.Likers)
             {
+                var userLikers = await GetUserLikes(userParams.UserId, userParams.Likers);
+                users = users.Where(u => userLikers.Contains(u.ID));
+            } 
+            if (userParams.Likees) 
+            {
+                var userLikees = await GetUserLikes(userParams.UserId, userParams.Likers);
+                users = users.Where(u => userLikees.Contains(u.ID));
+            }
+
+            if (!string.IsNullOrEmpty(userParams.OrderBy))
+            {   
                 switch (userParams.OrderBy) {
                     case "created": 
                         users = users.OrderByDescending(u => u.Created);
@@ -73,6 +84,27 @@ namespace EldritchDating.API.Data
         {
             return await context.Photos.Where(u => u.UserId == userId)
                 .FirstOrDefaultAsync(p => p.IsMain);
+        }
+
+        public async Task<Like> GetLike(int userId, int recipientId)
+        {
+            return await context.Likes.FirstOrDefaultAsync(u => 
+                u.LikerId == userId && u.LikeeId == recipientId);
+        }
+
+        private async Task<IEnumerable<int>> GetUserLikes(int userId, bool likers) 
+        {
+            var user = await context.Users.Include(x => x.Likers).Include(x => x.Likees)
+                .FirstOrDefaultAsync(u => u.ID == userId);
+
+            if (likers)
+            {
+                return user.Likers.Where(u => u.LikeeId == userId).Select(l => l.LikerId);
+            }
+            else 
+            {
+                return user.Likees.Where(u => u.LikerId == userId).Select(l => l.LikeeId);
+            }
         }
     }
 }
