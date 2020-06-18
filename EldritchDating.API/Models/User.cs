@@ -20,6 +20,8 @@ namespace EldritchDating.API.Models
         public ICollection<Photo> Photos { get; set; }
         public ICollection<Like> Likers { get; set; }
         public ICollection<Like> Likees { get; set; }
+        public ICollection<Message> MessagesSent { get; set; }
+        public ICollection<Message> MessagesRecieved { get; set; }
         public int Age { get; set; }
     }
 }
